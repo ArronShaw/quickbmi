@@ -1,0 +1,3 @@
+# Native SwiftUI instead of a cross-platform framework
+
+QuickBMI's actual goal is validating the App Store shipping pipeline, not the app's functionality — so we chose native Swift/SwiftUI over React Native or Flutter to remove variables from that validation. A cross-platform framework adds its own build tooling, native-bridge complexity, and App Store review quirks (e.g. RN's JS bundle, Flutter's engine binary) that are irrelevant to what we're testing and could mask or be confused with real pipeline issues. If a future version needs Android, this decision should be revisited then — nothing about the pipeline validation depends on staying native long-term.

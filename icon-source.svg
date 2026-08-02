@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34D1BF"/>
+      <stop offset="100%" stop-color="#2E7DE1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <!-- gauge arc -->
+  <path d="M 232 672 A 320 320 0 0 1 792 672"
+        fill="none" stroke="#FFFFFF" stroke-width="46" stroke-linecap="round" opacity="0.95"/>
+
+  <!-- tick marks -->
+  <g stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" opacity="0.9">
+    <line x1="232" y1="672" x2="232" y2="612"/>
+    <line x1="330" y1="450" x2="378" y2="498"/>
+    <line x1="512" y1="368" x2="512" y2="428"/>
+    <line x1="694" y1="450" x2="646" y2="498"/>
+    <line x1="792" y1="672" x2="792" y2="612"/>
+  </g>
+
+  <!-- needle -->
+  <g transform="rotate(28 512 672)">
+    <line x1="512" y1="672" x2="512" y2="440" stroke="#FFFFFF" stroke-width="26" stroke-linecap="round"/>
+  </g>
+  <circle cx="512" cy="672" r="44" fill="#FFFFFF"/>
+</svg>
