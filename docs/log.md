@@ -1,5 +1,41 @@
 # QuickBMI Progress Log
 
+## 2026-08-14
+
+**Accomplished:**
+- Apple App Review returned a Guideline 2.1 "Information Needed" request (not a bug/rejection) — asking for a demo screen recording, tested-device list, app description, setup instructions, external-services list, regional-differences note, and regulated-industry disclosure in the App Review Information notes.
+- Drafted the full response in `docs/app-review-notes.md`, ready to paste into App Store Connect → App Review → Notes. Since QuickBMI has no accounts, purchases, UGC, or sensitive permissions, most sections just state that plainly with the reasoning.
+- Removed the unused `aps-environment` push-notification entitlement from `QuickBMI.entitlements` — it was added automatically when enabling automatic signing but the app never used push notifications; leaving it in could raise unnecessary questions during review about an unused capability.
+
+**Blockers hit today:**
+- Can't produce the screen recording myself — it must be captured on a physical device by the user. Left a step-by-step checklist in `docs/app-review-notes.md` for what to capture.
+- Can't fill in the exact tested device/OS line without the user confirming which physical device was used most recently.
+
+**Next:**
+- User records the demo video on a physical iPhone per the checklist in `docs/app-review-notes.md`.
+- Fill in the actual device/iOS version tested on that file.
+- Paste the notes into App Store Connect, attach/reference the recording, and resubmit for review.
+
+## 2026-08-13 — no activity
+
+## 2026-08-12 — no activity
+
+## 2026-08-11 — no activity
+
+## 2026-08-10 — no activity
+
+## 2026-08-09 — no activity
+
+## 2026-08-08 — no activity
+
+## 2026-08-07 — no activity
+
+## 2026-08-06 — no activity
+
+## 2026-08-05 — no activity
+
+## 2026-08-04 — no activity
+
 ## 2026-08-03
 
 **Accomplished:**

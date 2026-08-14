@@ -12,6 +12,11 @@ struct ContentView: View {
     @State private var result: Double?
     @State private var showError = false
 
+    private enum Field {
+        case heightFeet, heightInches, heightCentimeters, weightPounds, weightKilograms
+    }
+    @FocusState private var focusedField: Field?
+
     var body: some View {
         NavigationStack {
             Form {
@@ -29,10 +34,12 @@ struct ContentView: View {
                         HStack {
                             TextField("Feet", text: $heightFeetText)
                                 .keyboardType(.numberPad)
+                                .focused($focusedField, equals: .heightFeet)
                             Text("ft")
                                 .foregroundStyle(.secondary)
                             TextField("Inches", text: $heightInchesText)
                                 .keyboardType(.numberPad)
+                                .focused($focusedField, equals: .heightInches)
                             Text("in")
                                 .foregroundStyle(.secondary)
                         }
@@ -40,6 +47,7 @@ struct ContentView: View {
                         HStack {
                             TextField("Centimeters", text: $heightCentimetersText)
                                 .keyboardType(.decimalPad)
+                                .focused($focusedField, equals: .heightCentimeters)
                             Text("cm")
                                 .foregroundStyle(.secondary)
                         }
@@ -51,6 +59,7 @@ struct ContentView: View {
                         HStack {
                             TextField("Pounds", text: $weightPoundsText)
                                 .keyboardType(.decimalPad)
+                                .focused($focusedField, equals: .weightPounds)
                             Text("lb")
                                 .foregroundStyle(.secondary)
                         }
@@ -58,6 +67,7 @@ struct ContentView: View {
                         HStack {
                             TextField("Kilograms", text: $weightKilogramsText)
                                 .keyboardType(.decimalPad)
+                                .focused($focusedField, equals: .weightKilograms)
                             Text("kg")
                                 .foregroundStyle(.secondary)
                         }
@@ -92,6 +102,8 @@ struct ContentView: View {
     }
 
     private func calculate() {
+        focusedField = nil
+
         let bmi = BMICalculator.bmi(
             unitSystem: unitSystem,
             heightFeet: Double(heightFeetText) ?? 0,
