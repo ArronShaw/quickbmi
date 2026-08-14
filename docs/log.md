@@ -7,14 +7,16 @@
 - Drafted the full response in `docs/app-review-notes.md`, ready to paste into App Store Connect → App Review → Notes. Since QuickBMI has no accounts, purchases, UGC, or sensitive permissions, most sections just state that plainly with the reasoning.
 - Removed the unused `aps-environment` push-notification entitlement from `QuickBMI.entitlements` — it was added automatically when enabling automatic signing but the app never used push notifications; leaving it in could raise unnecessary questions during review about an unused capability.
 
+- Fixed the actual bug prompting the re-test: the keyboard now dismisses when Calculate is tapped (`ContentView.swift`, `FocusState`), so the result isn't hidden behind it.
+- Renumbered `docs/app-review-notes.md` to match Apple's "Next Steps" list 1–7 exactly, folded the video-attachment note into item 1, bumped `CURRENT_PROJECT_VERSION` to `2` and regenerated the Xcode project.
+- User recorded the demo video on a physical iPhone, archived/uploaded build 1.0 (2) via Xcode Organizer, verified the keyboard fix via TestFlight, replied in App Store Connect's Resolution Center with the numbered notes + video attachment, and **resubmitted the app for review**.
+
 **Blockers hit today:**
-- Can't produce the screen recording myself — it must be captured on a physical device by the user. Left a step-by-step checklist in `docs/app-review-notes.md` for what to capture.
-- Can't fill in the exact tested device/OS line without the user confirming which physical device was used most recently.
+- Can't produce the screen recording myself — it had to be captured on a physical device by the user.
 
 **Next:**
-- User records the demo video on a physical iPhone per the checklist in `docs/app-review-notes.md`.
-- Fill in the actual device/iOS version tested on that file.
-- Paste the notes into App Store Connect, attach/reference the recording, and resubmit for review.
+- Wait for Apple's review decision on the resubmission.
+- Fill in the exact tested device/iOS version line in `docs/app-review-notes.md` for the record, once confirmed.
 
 ## 2026-08-13 — no activity
 
