@@ -1,5 +1,27 @@
 # QuickBMI Progress Log
 
+## 2026-08-17
+
+**Accomplished:**
+- Apple App Review rejected v2.0 (4) under Guideline 1.4.1 (Safety - Physical
+  Harm): BMI category thresholds shown without a citation to their source.
+- Added a persistent, always-visible citation link on the main screen
+  (footer of the Calculate section in `ContentView.swift`) pointing to the
+  CDC's "About Adult BMI" page, which matches the app's existing formula and
+  category thresholds exactly — no calculation logic changed.
+- Bumped to `MARKETING_VERSION 2.0` / `CURRENT_PROJECT_VERSION 5` in
+  `project.yml` to match and move past what was actually reviewed (2.0 (4),
+  which had been bumped directly in Xcode outside this repo's tracked
+  state) and regenerated the Xcode project.
+- Logged the fix and a suggested Resolution Center reply in
+  `docs/app-review-notes.md`.
+
+**Next:**
+- Archive/upload build 2.0 (5) via Xcode Organizer, verify via TestFlight.
+- Reply in Resolution Center with the citation explanation and resubmit.
+
+## 2026-08-16 — no activity
+
 ## 2026-08-14
 
 **Accomplished:**

@@ -1,5 +1,31 @@
 # App Review Information — notes for App Store Connect
 
+## 2026-08-17 — Guideline 1.4.1 (Safety - Physical Harm), v2.0 (4)
+
+Reviewer feedback: the app shows BMI category thresholds without citing a
+source. Fix: added a persistent, always-visible link under the Calculate
+button (not gated behind pressing Calculate) crediting the source —
+`ContentView.swift`, footer of the Calculate section:
+
+> BMI formula & category ranges: CDC, About Adult BMI
+> https://www.cdc.gov/bmi/adult-calculator/about.html
+
+The BMI formula and the four category thresholds (18.5 / 25 / 30) already
+in `BMICalculator.swift` match the CDC's published adult BMI categories
+exactly, so no calculation logic changed — only the missing citation was
+added, visible on the main screen without needing to calculate first.
+
+Suggested Resolution Center reply for this one:
+> Thank you for the feedback. We've added a citation directly on the main
+> screen (footer under the Calculate button, always visible) linking to the
+> CDC's "About Adult BMI" page, which is the source for the BMI formula and
+> the four category thresholds (Underweight/Normal/Overweight/Obese) used in
+> the app. This is included in build 2.0 (5).
+
+---
+
+## Guideline 2.1 (Information Needed) response — reference
+
 Paste this into **App Store Connect → App Review → Notes** (and into the
 Resolution Center reply, alongside the video attachment) on the next
 submission, in response to the Guideline 2.1 information request. Numbering

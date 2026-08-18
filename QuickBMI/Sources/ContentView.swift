@@ -78,6 +78,10 @@ struct ContentView: View {
                     Button("Calculate") {
                         calculate()
                     }
+                } footer: {
+                    Link("BMI formula & category ranges: CDC, About Adult BMI",
+                         destination: URL(string: "https://www.cdc.gov/bmi/adult-calculator/about.html")!)
+                        .font(.footnote)
                 }
 
                 if let result {
